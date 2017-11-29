@@ -1,0 +1,31 @@
+{
+  "name": "node-express-boilerplate",
+  "version": "1.0.0",
+  "description": "node-express-boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node-express-boilerplate"
+  ],
+  "author": "Fedor",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "cross-env": "^5.1.0"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.33",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-validator": "^4.2.1",
+    "helmet": "^3.9.0"
+  }
+}
