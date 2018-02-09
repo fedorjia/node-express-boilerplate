@@ -1,5 +1,5 @@
 # nodejs express boilerplate
 
 #### require
-* nodejs > 8
+* node > 8
 * mongodb
