@@ -1,17 +1,14 @@
 const ObjectID = require('mongodb').ObjectID;
-const COLLECTION = 'users';
 
-const co = () => {
-	return mongo.collection(COLLECTION);
-};
+const AddressModel = require('../model/address')
+const model = new AddressModel()
 
 module.exports = {
-
 	/**
 	 * add address
 	 */
 	async add(uid, data) {
-		let obj = await co().findOneAndUpdate({_id: ObjectID(uid)},
+		let obj = model.findOneAndUpdate({_id: ObjectID(uid)},
 			{
 				$push: { addresses: data },
 				$set: { updated_at: Date.now() }

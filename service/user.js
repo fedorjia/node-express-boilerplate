@@ -1,9 +1,5 @@
-const ObjectID = require('mongodb').ObjectID;
-const COLLECTION = 'users';
-
-const co = () => {
-	return mongo.collection(COLLECTION);
-};
+const UserModel = require('../model/user')
+const model = new UserModel()
 
 module.exports = {
 
@@ -11,9 +7,7 @@ module.exports = {
 	 * get users
 	 */
 	async get() {
-		return await co().find()
-			.sort({created_at: -1})
-			.toArray();
+		return await model.get()
 	},
 
 	/**
@@ -21,7 +15,7 @@ module.exports = {
 	 */
 	async add(data) {
 		// find
-		let obj = await co().findOne({username: data.username});
+		let obj = await model.findOne({username: data.username});
 		if(obj) {
 			throw 'username_already_existed';
 		}
@@ -31,15 +25,13 @@ module.exports = {
 		data.created_at = now;
 		data.updated_at = now;
 		data.addresses = [];
-		obj = await co().save(data);
-
-		return obj.ops[0]._id;
+		return await model.insertOne(data);
 	},
 
 	/**
 	 * detail
 	 */
 	async detail(id) {
-		return await co().findOne({_id:ObjectID(id)});
+		return await model.findById(id);
 	}
 };

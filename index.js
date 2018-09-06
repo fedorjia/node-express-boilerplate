@@ -43,9 +43,9 @@ app.use((req, res, ignore) => {
 /**
  * connect mongodb & start listening
  */
-global.mongo = {};
-mongodb.connect().then((db) => {
-	global.mongo = db;
+global.mongoClient = null;
+mongodb.connect().then((client) => {
+	global.mongoClient = client;
 	app.listen(setting.port);
 	util.log(setting.appname + ' launched at: ' + setting.port);
 }).catch((err) => {

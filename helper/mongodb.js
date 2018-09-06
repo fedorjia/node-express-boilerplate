@@ -11,7 +11,7 @@ bluebird.promisifyAll(mongodb);
  */
 exports.connect = function() {
 	return mongodb.MongoClient.connectAsync(
-		format("mongodb://%s:%s/%s", setting.mongo.host, setting.mongo.port, setting.mongo.dbname), {
-			useNewUrlParser: true
-		});
+		format("mongodb://%s:%s", setting.mongo.host, setting.mongo.port), {
+		useNewUrlParser: true
+	});
 };

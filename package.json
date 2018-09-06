@@ -20,12 +20,12 @@
     "cross-env": "^5.1.0"
   },
   "dependencies": {
-    "mongodb": "^2.2.33",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
-    "express-validator": "^4.2.1",
-    "helmet": "^3.9.0"
+    "express-validator": "^5.3.0",
+    "helmet": "^3.9.0",
+    "mongodb": "^3.1.4"
   }
 }
