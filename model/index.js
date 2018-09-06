@@ -59,10 +59,12 @@ class Model {
 				})
 				.limit(limit)
 				.sort(sort)
+				.toArray()
 		} else {
 			return await this._co().find(q)
 				.limit(limit)
 				.sort(sort)
+				.toArray()
 		}
 	}
 }
