@@ -10,8 +10,8 @@ bluebird.promisifyAll(mongodb);
  * connect db
  */
 exports.connect = function() {
-	return mongodb.MongoClient.connectAsync(format("mongodb://%s:%s/%s",
-		setting.mongo.host,
-		setting.mongo.port,
-		setting.mongo.dbname));
+	return mongodb.MongoClient.connectAsync(
+		format("mongodb://%s:%s/%s", setting.mongo.host, setting.mongo.port, setting.mongo.dbname), {
+			useNewUrlParser: true
+		});
 };
