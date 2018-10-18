@@ -1,4 +1,4 @@
-// const isDev = process.env.NODE_ENV === 'development';
+// const isDev = process.env.NODE_ENV === 'development'
 
 const setting = {
     appname: 'node-express-boilerplate',
@@ -8,6 +8,6 @@ const setting = {
         port: 27017,
         dbname: "node_express_boilerplate"
     }
-};
+}
 
-module.exports = setting;
+module.exports = setting

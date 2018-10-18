@@ -4,4 +4,4 @@ module.exports = {
 	REQUEST_ERROR: 400, 	// 请求参数错误
 	REQUEST_NOT_FOUND: 404, // 请求未找到
 	INTERNAL_ERROR: 500 	// 内部错误
-};
+}

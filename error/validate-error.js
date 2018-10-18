@@ -1,11 +1,11 @@
-const util = require('util');
+const util = require('util')
 
 const ValidateError = function ValidateError(errors) {
-	Error.captureStackTrace(this, this.constructor);
-	this.name = this.constructor.name;
-	this.errors = errors;
-};
+	Error.captureStackTrace(this, this.constructor)
+	this.name = this.constructor.name
+	this.errors = errors
+}
 
-util.inherits(ValidateError, Error);
+util.inherits(ValidateError, Error)
 
-module.exports = ValidateError;
+module.exports = ValidateError
